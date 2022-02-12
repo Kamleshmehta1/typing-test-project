@@ -77,15 +77,7 @@ function myfunction() {
     input.forEach((element, value) => {
         if (element === contentArray[value]) {
             document.querySelectorAll("span")[value].classList.add("green")
-        } else if (element !== contentArray[value] && element !== " ") {
-            document.querySelectorAll("span")[value].classList.add("red")
-            count = count + 1;
-            document.querySelector(".mistakeValue").innerHTML = count;
-        } else if (element.toUpperCase() === contentArray[value] || element.toLowerCase() === contentArray[value]) {
-            document.querySelectorAll("span")[value].classList.add("red")
-            count = count + 1;
-            document.querySelector(".mistakeValue").innerHTML = count;
-        } else if (element === " ") {
+        } else {
             document.querySelectorAll("span")[value].classList.add("red")
             count = count + 1;
             document.querySelector(".mistakeValue").innerHTML = count;
